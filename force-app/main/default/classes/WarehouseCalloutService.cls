@@ -1,4 +1,4 @@
-global with sharing class WarehouseCalloutService implements Queueable {
+global with sharing class WarehouseCalloutService implements Queueable, Database.AllowsCallouts {
     private static final String WAREHOUSE_URL = 'https://th-superbadge-apex.herokuapp.com/equipment';
 
     global void execute(QueueableContext context) {
